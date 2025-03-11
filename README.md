@@ -1,17 +1,27 @@
 # Fábrica de Software 2025/1 
 ## Propostas de projeto
 
-Lavanderia
+Sistema para lavanderia
+  - F1
+  - F2
+  - F3
 
-### Ambiente de desenvolvimento JAVA (version 21)
-[Eclipse Adoptium](https://adoptium.net/)
-[Microsoft OpenJDK](https://www.microsoft.com/openjdk)
-[AWS CORRETTO](https://aws.amazon.com/pt/corretto/)
+## Livro Eng Software Moderna
+[Eng. Soft Moderna - Requisitos](https://engsoftmoderna.info/cap3.html)
 
-- JRE - Java Runtime Environment
-  -Java Virtual Machine JVM (serve pra rodar)
-   -java.exe (abre o console)/ javaw.exe (nao abre o console(Minecraft))
-- JDK - Java Development Kit
- - Compilar o java( entra main.java e sai main.class no formato bytecode)(javac.exe) 
+## Histórias de Usuário
+- Como usuário do sistema eu gostaria de cadastrar o cliente com: nome e número de telefone.
+- Como usuário do sistema eu gostaria de registrar uma data de retirada da(s) roupa(s) do cliente.
+- Como usuário do sistema eu gostaria de poder salvar o cadastro de clientes frequentes.
+- Como usuário do sistema eu gostaria de selecionar o tipo de roupa que o cliente está deixando na loja.
+- Como usuário do sistema eu gostaria que o sistema emitisse um código numerico de 4 digitos para cada cliente.
+- Como usuário do sistema eu gostaria que o sistema imprimisse duas comandas, um para o cliente e um para a loja.
+- Como usuário do sistema eu gostaria que o sistema mostrasse nas comandas, a data (dd/mm/aaaa) e a hora (hh/mm/ss) que o cliente deixou as roupas na loja.
+- Como usuário do sistema eu gostaria que o sistema tivesse uma opção para selecionar se o cliente pagou na hora da entrega ou irá pagar na hora da retirada. Caso o cliente pagar antes mostrar a forma de pagamento (pix, dinheiro, cartão de credito ou debito).
+- Como usuário do sistema eu gostaria que o sistema calculasse automaticamente o preço das roupas dos clientes.
 
- - Extesion Pack for Java para rodar Java no VSCode
+
+
+## Nome da Equipe
+- Vitor Machado Blume
+- Matheus Karpinski
