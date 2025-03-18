@@ -14,3 +14,5 @@
  git add . 
  git commit -m "feat: titulo "
  git push
+
+ SETA ABERTA ASSOCIAÇÃO VIRA UMA VARIAVEL/ATRIBUTO
