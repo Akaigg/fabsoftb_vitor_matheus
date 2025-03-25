@@ -8,16 +8,16 @@ public class Cliente {
     private String nome;
     private String endereco;
     private Cidade cidade;
-    private ArrayList listaPokemon = new ArrayList();
+    private ArrayList<Pokemon> listaPokemon = new ArrayList<Pokemon>();
 
     //construtor - mesmo nome da classe e não tem retorno
     // inicializar atributos
     // obriga a passagem de valores
 
-    public ArrayList getListaPokemon() {
+    public ArrayList<Pokemon> getListaPokemon() {
         return listaPokemon;
     }
-    public void setListaPokemon(ArrayList listaPokemon) {
+    public void setListaPokemon(ArrayList<Pokemon> listaPokemon) {
         this.listaPokemon = listaPokemon;
     }
 

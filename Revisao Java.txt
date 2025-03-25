@@ -16,3 +16,5 @@
  git push
 
  SETA ABERTA ASSOCIAÇÃO VIRA UMA VARIAVEL/ATRIBUTO
+
+ < > = operador diamante, limita oq entra na lista
