@@ -20,3 +20,5 @@
  < > = operador diamante, limita oq entra na lista
 
  https://refactoring.guru/design-patterns
+
+ File > preferences > settings > hint
