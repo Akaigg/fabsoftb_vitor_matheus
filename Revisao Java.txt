@@ -1,24 +1,34 @@
-### Ambiente de desenvolvimento JAVA (version 21)
+### Ambiente de desenvolvimento JAVA (version 21) para baixar: 
 [Eclipse Adoptium](https://adoptium.net/)
 [Microsoft OpenJDK](https://www.microsoft.com/openjdk)
 [AWS CORRETTO](https://aws.amazon.com/pt/corretto/)
 
+Desabilitar hint: File > preferences > settings > hint
+
+Como o java funciona:
 - JRE - Java Runtime Environment
   -Java Virtual Machine JVM (serve pra rodar)
    -java.exe (abre o console)/ javaw.exe (nao abre o console(Minecraft))
 - JDK - Java Development Kit
  - Compilar o java( entra main.java e sai main.class no formato bytecode)(javac.exe) 
 
- - Extesion Pack for Java para rodar Java no VSCode
 
+Commitar para o github *importante*
  git add . 
  git commit -m "feat: titulo "
  git push
 
- SETA ABERTA ASSOCIAÇÃO VIRA UMA VARIAVEL/ATRIBUTO
+Banco de dados:
+ - SETA ABERTA ASSOCIAÇÃO VIRA UMA VARIAVEL/ATRIBUTO
 
+Operadores java:
  < > = operador diamante, limita oq entra na lista
 
- https://refactoring.guru/design-patterns
+Livro bacanudo:
+https://refactoring.guru/design-patterns
 
- File > preferences > settings > hint
+
+Extensões:
+ - Extesion Pack for Java para rodar Java no VSCode
+ - Spring Boot Extesion Pack para utilizar o Spring no VSCode
+ - PlantUML para implementar UML no VSCode
