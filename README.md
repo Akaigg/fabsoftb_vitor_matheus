@@ -15,7 +15,6 @@ Sistema para lavanderia
 - Como usuário do sistema eu gostaria de poder salvar o cadastro de clientes frequentes.
 - Como usuário do sistema eu gostaria de selecionar o tipo de roupa que o cliente está deixando na loja.
 - Como usuário do sistema eu gostaria que o sistema emitisse um código numerico de 4 digitos para cada cliente.
-- Como usuário do sistema eu gostaria que o sistema imprimisse duas comandas, um para o cliente e um para a loja.
 - Como usuário do sistema eu gostaria que o sistema mostrasse nas comandas, a data (dd/mm/aaaa) e a hora (hh/mm/ss) que o cliente deixou as roupas na loja.
 - Como usuário do sistema eu gostaria que o sistema tivesse uma opção para selecionar se o cliente pagou na hora da entrega ou irá pagar na hora da retirada. Caso o cliente pagar antes mostrar a forma de pagamento (pix, dinheiro, cartão de credito ou debito).
 - Como usuário do sistema eu gostaria que o sistema calculasse automaticamente o preço das roupas dos clientes.
