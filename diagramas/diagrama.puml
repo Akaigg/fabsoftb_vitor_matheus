@@ -1,0 +1,67 @@
+@startuml
+package br.univille.projfabsoftlavanderia {
+    class Cliente {
+        - Long id
+        - String nome
+        - String telefone
+        - String codigo
+        - List<Roupa> roupas
+        - Pagamento pagamento
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+        + String getTelefone()
+        + void setTelefone(String telefone)
+        + String getCodigo()
+        + void setCodigo(String codigo)
+        + List<Roupa> getRoupas()
+        + void setRoupas(List<Roupa> roupas)
+        + Pagamento getPagamento()
+        + void setPagamento(Pagamento pagamento)
+    }
+
+    class Roupa {
+        - Long id
+        - String tipo
+        - double preco
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getTipo()
+        + void setTipo(String tipo)
+        + double getPreco()
+        + void setPreco(double preco)
+    }
+
+    class Pagamento {
+        - Long id
+        - boolean pago
+        - String formaPagamento
+        --
+        + Long getId()
+        + void setId(Long id)
+        + boolean isPago()
+        + void setPago(boolean pago)
+        + String getFormaPagamento()
+        + void setFormaPagamento(String formaPagamento)
+    }
+
+    class Comanda {
+        - Long id
+        - LocalDateTime dataEntrada
+        - LocalDateTime dataRetirada
+        --
+        + Long getId()
+        + void setId(Long id)
+        + LocalDateTime getDataEntrada()
+        + void setDataEntrada(LocalDateTime dataEntrada)
+        + LocalDateTime getDataRetirada()
+        + void setDataRetirada(LocalDateTime dataRetirada)
+    }
+
+    Cliente "1" --> "*" Roupa
+    Cliente "1" --> "1" Pagamento
+}
+@enduml
