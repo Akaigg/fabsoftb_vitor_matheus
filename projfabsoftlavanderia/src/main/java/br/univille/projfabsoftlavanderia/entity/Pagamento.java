@@ -1,16 +1,16 @@
 package br.univille.projfabsoftlavanderia.entity;
 
 public class Pagamento {
-    private Long id;
+    private long id;
     private boolean pago;
     private String formaPagamento;
 
     // Getters e Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

@@ -1,16 +1,16 @@
 package br.univille.projfabsoftlavanderia.entity;
 
 public class Roupa {
-    private Long id;
+    private long id;
     private String tipo;
     private double preco;
 
     // Getters e Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

@@ -3,7 +3,7 @@ package br.univille.projfabsoftlavanderia.entity;
 import java.util.List;
 
 public class Cliente {
-    private Long id;
+    private long id;
     private String nome;
     private String telefone;
     private String codigo;
@@ -11,11 +11,11 @@ public class Cliente {
     private Pagamento pagamento;
 
     // Getters e Setters
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
