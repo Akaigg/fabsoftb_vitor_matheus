@@ -63,5 +63,6 @@ package br.univille.projfabsoftlavanderia {
 
     Cliente "1" --> "*" Roupa
     Cliente "1" --> "1" Pagamento
+    Cliente "1" --> "*" Comanda
 }
 @enduml
