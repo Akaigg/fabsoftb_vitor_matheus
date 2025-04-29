@@ -18,7 +18,7 @@ Sistema para lavanderia
 - Como usuário do sistema eu gostaria que o sistema mostrasse nas comandas, a data (dd/mm/aaaa) e a hora (hh/mm/ss) que o cliente deixou as roupas na loja.
 - Como usuário do sistema eu gostaria que o sistema tivesse uma opção para selecionar se o cliente pagou na hora da entrega ou irá pagar na hora da retirada. Caso o cliente pagar antes mostrar a forma de pagamento (pix, dinheiro, cartão de credito ou debito).
 - Como usuário do sistema eu gostaria que o sistema calculasse automaticamente o preço das roupas dos clientes.
-- Como usuário do sistema, eu gostaria de cadastrar diferentes tipos de serviços oferecidos pela lavanderia (ex.: lavagem, passagem, tingimento) com seus respectivos preços, para que o sistema possa associá-los às roupas deixadas pelo cliente.  
+- Como usuário do sistema eu gostaria de vincular os serviços oferecidos pela lavanderia com as roupas deixadas na loja pelos clientes. 
 
 
 
