@@ -1,8 +1,16 @@
 package br.univille.projfabsoftlavanderia.entity;
 
 import java.time.LocalDateTime;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Comanda {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    
     private long id;
     private LocalDateTime dataEntrada;
     private LocalDateTime dataRetirada;

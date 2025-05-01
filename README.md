@@ -1,4 +1,10 @@
 # Fábrica de Software 2025/1 
+
+## Nome da Equipe
+- Vitor Machado Blume
+- Matheus Karpinski
+
+
 ## Propostas de projeto
 
 Sistema para lavanderia
@@ -19,10 +25,3 @@ Sistema para lavanderia
 - Como usuário do sistema eu gostaria que o sistema tivesse uma opção para selecionar se o cliente pagou na hora da entrega ou irá pagar na hora da retirada. Caso o cliente pagar antes mostrar a forma de pagamento (pix, dinheiro, cartão de credito ou debito).
 - Como usuário do sistema eu gostaria que o sistema calculasse automaticamente o preço das roupas dos clientes.
 - Como usuário do sistema eu gostaria de vincular os serviços oferecidos pela lavanderia com as roupas deixadas na loja pelos clientes. 
-
-
-
-
-## Nome da Equipe
-- Vitor Machado Blume
-- Matheus Karpinski

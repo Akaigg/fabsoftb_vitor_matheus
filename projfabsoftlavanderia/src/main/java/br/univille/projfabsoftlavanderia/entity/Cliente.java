@@ -2,12 +2,30 @@ package br.univille.projfabsoftlavanderia.entity;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+
+@Entity
 public class Cliente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+
     private long id;
+    @Column(length=1000, nullable = false)
     private String nome;
+    @Column(nullable = false)
     private String telefone;
+    @Column(nullable = false)
     private String codigo;
+    @OneToMany
+    //JoinColumn?
     private List<Roupa> roupas;
+    @OneToOne
     private Pagamento pagamento;
 
     // Getters e Setters
