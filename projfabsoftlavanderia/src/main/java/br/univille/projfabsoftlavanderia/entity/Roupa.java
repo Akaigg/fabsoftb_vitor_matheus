@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Roupa {
@@ -13,6 +14,8 @@ public class Roupa {
     private long id;
     private String tipo;
     private double preco;
+    @OneToOne
+    private Servico servico;
 
     // Getters e Setters
     public long getId() {
@@ -38,4 +41,12 @@ public class Roupa {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+    public Servico getServico() {
+        return servico;
+    }
+
+    public void setServico(Servico servico) {
+        this.servico = servico;
+    }
+
 }

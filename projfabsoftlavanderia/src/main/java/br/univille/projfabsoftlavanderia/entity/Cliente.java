@@ -10,6 +10,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 
+///[NOK] Diagrama de entidades (Não reflete o código do sistema: 
+/// entidade Cliente não possui associação com Comanda, entidade 
+/// Comanda possui associação com Cliente e Pagamento, a entidade 
+/// Roupa não possui associação com Serviço) 
+/// [NOK] API REST (apenas o endpoint do Cliente foi implementado e possui erros)
+
 @Entity
 public class Cliente {
     @Id
@@ -23,10 +29,11 @@ public class Cliente {
     @Column(nullable = false)
     private String codigo;
     @OneToMany
-    //JoinColumn?
     private List<Roupa> roupas;
     @OneToOne
     private Pagamento pagamento;
+    @OneToOne
+    private Comanda comanda;
 
     // Getters e Setters
     public long getId() {
@@ -75,5 +82,12 @@ public class Cliente {
 
     public void setPagamento(Pagamento pagamento) {
         this.pagamento = pagamento;
+    }
+    public Comanda getComanda() {
+        return comanda;
+    }
+
+    public void setComanda(Comanda comanda) {
+        this.comanda = comanda;
     }
 }
