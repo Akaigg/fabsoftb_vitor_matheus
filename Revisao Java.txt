@@ -32,3 +32,7 @@ Extensões:
  - Extesion Pack for Java para rodar Java no VSCode
  - Spring Boot Extesion Pack para utilizar o Spring no VSCode
  - PlantUML para implementar UML no VSCode
+
+ NODEJS é essensial para rodar o Angular
+ TypeScript
+ Angular
