@@ -1,23 +1,19 @@
 ### API CLIENTE - GET
 GET http://localhost:8080/api/v1/clientes
 
-## API CLIENTE - POST
-
+// ERRO NO POST, numero 400: bad request
+### API CLIENTE - POST
 POST http://localhost:8080/api/v1/clientes
 Content-Type: application/json
 
-
-
-
-
 {
+    "id": 1,
     "nome": "zezinho",
     "telefone": "55512345"
 }
 
 
-## API CLIENTE - PUT
-
+### API CLIENTE - PUT
 PUT http://localhost:8080/api/v1/clientes/1
 Content-Type: application/json
 
@@ -26,3 +22,8 @@ Content-Type: application/json
     "nome": "zezinho da silva",
     "telefone": "55512345"
 }
+
+
+### API CLIENTE - DELETE
+DELETE http://localhost:8080/api/v1/clientes/1
+Content-Type: application/json
