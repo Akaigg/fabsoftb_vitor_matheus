@@ -1,5 +1,17 @@
 <main class="container">
     <h2>Clientes</h2>
-<table class="table"></table>
-
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umCliente of listaClientes">
+                <td>{{umCliente.nome}}</td>
+                <td>{{umCliente.telefone}}</td>
+            </tr>
+        </tbody>
+    </table>
 </main>
