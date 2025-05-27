@@ -37,12 +37,13 @@ public class ClienteController {
         if(cliente == null){
             return ResponseEntity.badRequest().build();
         }
-        if (cliente.getId() == 0){
+        if(cliente.getId() == 0){
             service.save(cliente);
             return new ResponseEntity<Cliente>(cliente, HttpStatus.OK);
         }
         return ResponseEntity.badRequest().build();
     }
+    
     @PutMapping("/{id}")
     public ResponseEntity<Cliente>putCliente(@PathVariable long id, @RequestBody Cliente cliente){
         if (id <=0 || cliente == null){
