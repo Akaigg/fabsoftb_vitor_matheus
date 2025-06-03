@@ -4,6 +4,7 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -20,7 +21,6 @@ import jakarta.persistence.OneToOne;
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
-
     private long id;
     @Column(length=1000, nullable = false)
     private String nome;
@@ -28,11 +28,11 @@ public class Cliente {
     private String telefone;
     @Column(nullable = false)
     private String codigo;
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER)
     private List<Roupa> roupas;
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     private Pagamento pagamento;
-    @OneToOne
+    @OneToOne(fetch = FetchType.EAGER)
     private Comanda comanda;
 
     // Getters e Setters

@@ -53,10 +53,7 @@ public class ComandaController {
         if (ComandaAntigo == null){
             return ResponseEntity.notFound().build();
         }
-        //ComandaAntigo.setNome(Comanda.getNome());
-        //ComandaAntigo.setTelefone(Comanda.getTelefone());
-        //ComandaAntigo.setRoupas(Comanda.getRoupas());
-        ComandaAntigo.setPagamento(Comanda.getPagamento());
+        ComandaAntigo.setCliente(Comanda.getCliente());
 
         service.save(ComandaAntigo);
         return new ResponseEntity<Comanda>(ComandaAntigo, HttpStatus.OK);
