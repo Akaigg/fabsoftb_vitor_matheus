@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoftlavanderia.entity.Cliente;
 import br.univille.projfabsoftlavanderia.service.ClienteService;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @RestController
 @RequestMapping("/api/v1/clientes")
@@ -31,6 +33,22 @@ public class ClienteController {
         return new ResponseEntity<List<Cliente>>(listaCliente, HttpStatus.OK);
         
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Cliente> getCliente(@PathVariable long id){
+        var umCliente = service.getById(id);
+
+        return new ResponseEntity<Cliente>(umCliente, HttpStatus.OK);
+    }
+
+    
+    
+
+
+
+
+
+
 
     @PostMapping
     public ResponseEntity<Cliente> postCliente(@RequestBody Cliente cliente){
