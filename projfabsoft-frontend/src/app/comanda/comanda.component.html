@@ -1,0 +1,27 @@
+<main class="container">
+    <h2>comanda</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Data Entrada</th>
+                <th>Data Retirada</th>
+                <th>Roupas</th>
+                <th>Serviços</th>
+                <th>Pagamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umcomanda of listacomandas">
+                <td>{{umcomanda.dataEntrada}}</td>
+                <td>{{umcomanda.dataRetirada}}</td>
+                <td>{{umcomanda.ListaRoupas}}</td>
+                <td>{{umcomanda.ListaServicos}}</td>
+                <td>{{umcomanda.pagamento}}</td>
+                <td>
+                    <a (click)="alterar(umcomanda)" class="btn btn-secondary">Alterar</a>
+                    <a (click)="abrirConfirmacao(umcomanda)" class="btn btn-danger ml-2">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>

@@ -1,0 +1,19 @@
+<main class="container">
+    <h2>pagamento</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Forma Pagamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umpagamento of listapagamentos">
+                <td>{{umpagamento.formaPagamento}}</td>
+                <td>
+                    <a (click)="alterar(umpagamento)" class="btn btn-secondary">Alterar</a>
+                    <a (click)="abrirConfirmacao(umpagamento)" class="btn btn-danger ml-2">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>

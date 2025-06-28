@@ -1,0 +1,23 @@
+<main class="container">
+    <h2>roupa</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tipo Roupa</th>
+                <th>Tipo Serviços</th>
+                <th>Preço Serviços</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umroupa of listaroupas">
+                <td>{{umroupa.tipo}}</td>
+                <td>{{umroupa.servico}}</td>
+                <td>{{umroupa.preco}}</td>
+                <td>
+                    <a (click)="alterar(umroupa)" class="btn btn-secondary">Alterar</a>
+                    <a (click)="abrirConfirmacao(umroupa)" class="btn btn-danger ml-2">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>

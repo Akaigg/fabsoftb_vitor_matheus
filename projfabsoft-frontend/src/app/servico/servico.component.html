@@ -1,0 +1,21 @@
+<main class="container">
+    <h2>serviço</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Descrição Roupa</th>
+                <th>Preço Roupa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umservico of listaservicos">
+                <td>{{umservico.descricao}}</td>
+                <td>{{umservico.preco}}</td>
+                <td>
+                    <a (click)="alterar(umservico)" class="btn btn-secondary">Alterar</a>
+                    <a (click)="abrirConfirmacao(umservico)" class="btn btn-danger ml-2">Excluir</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</main>
