@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
 import * as bootstrap from 'bootstrap';
 
 @Component({
-  selector: 'app-Servico',
+  selector: 'app-servico',
   imports: [HttpClientModule, CommonModule],
   templateUrl: './servico.component.html',
-  styleUrl: './servico.component.css',
+  styleUrls: ['./servico.component.css'],
   providers: [ServicoService, Router]
 })
 export class ServicoComponent {
@@ -18,30 +18,30 @@ export class ServicoComponent {
 
   @ViewChild('myModal') modalElement!: ElementRef;
   private modal!: bootstrap.Modal;
-  private ServicoSelecionado!: Servico;
+  private servicoSelecionado!: Servico;
 
   constructor(
-    private ServicoService: ServicoService, 
+    private servicoService: ServicoService, 
     private router: Router
   ) {}
 
   novo() {
-    this.router.navigate(['Servicos/novo']);
+    this.router.navigate(['servico/novo']);
   }
 
   ngOnInit() {
-    console.log("Carregando Servicos...");
-    this.ServicoService.getServicos().subscribe(Servicos => {
-      this.listaServicos = Servicos;
+    console.log("Carregando Serviços...");
+    this.servicoService.getServicos().subscribe(servicos => {
+      this.listaServicos = servicos;
     });
   }
 
-  alterar(Servico: Servico) {
-    this.router.navigate(['Servicos/alterar', Servico.id]);
+  alterar(servico: Servico) {
+    this.router.navigate(['servico/alterar', servico.id]);  
   }
 
-  abrirConfirmacao(Servico: Servico) {
-    this.ServicoSelecionado = Servico;
+  abrirConfirmacao(servico: Servico) {
+    this.servicoSelecionado = servico;
     this.modal = new bootstrap.Modal(this.modalElement.nativeElement);
     this.modal.show();
   }
@@ -51,19 +51,18 @@ export class ServicoComponent {
   }
 
   confirmarExclusao() {
-    this.ServicoService.excluirServico(this.ServicoSelecionado.id).subscribe(
+    this.servicoService.excluirServico(this.servicoSelecionado.id).subscribe(
       () => {
         this.fecharConfirmacao();
-        this.ServicoService.getServicos().subscribe(
-          Servicos => {
-            this.listaServicos = Servicos;
+        this.servicoService.getServicos().subscribe(
+          servicos => {
+            this.listaServicos = servicos;
           }
         );
       },
       error => {
-        console.error('Erro ao excluir Servico:', error);
+        console.error('Erro ao excluir Serviço:', error);
       }
     );
   }
-
 }

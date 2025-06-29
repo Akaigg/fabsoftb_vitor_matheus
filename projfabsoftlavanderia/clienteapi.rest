@@ -9,10 +9,8 @@ Content-Type: application/json
 {
     "nome": "zezinho",
     "telefone": "55512345",
-    "codigo": "1",
-    "roupas": [
-        {}
-    ],
+    "codigo": "1"
+    
     
     
     

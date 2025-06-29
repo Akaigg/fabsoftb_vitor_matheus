@@ -10,7 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   selector: 'app-form-comanda',
   imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './form-comanda.component.html',
-  styleUrl: './form-comanda.component.css',
+  styleUrls: ['./form-comanda.component.css'],
   providers: [ComandaService, Router]
 })
 export class FormComandaComponent {

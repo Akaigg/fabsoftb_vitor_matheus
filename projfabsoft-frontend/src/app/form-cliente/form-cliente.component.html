@@ -10,6 +10,10 @@
                 <label for="txtTelefone">Telefone</label>
                 <input type="text" [(ngModel)] = "cliente.telefone" class="form-control" id="txtTelefone">
             </div>
+            <div class="form-group">
+                <label for="txtCodigo">Código</label>
+                <input type="text" [(ngModel)] = "cliente.codigo" class="form-control" id="txtCodigo">
+            </div>
         </div>
         <button (click)="salvar()" class="btn btn-primary">Salvar</button>
     </div>

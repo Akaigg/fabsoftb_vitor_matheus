@@ -10,7 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   selector: 'app-form-pagamento',
   imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './form-pagamento.component.html',
-  styleUrl: './form-pagamento.component.css',
+  styleUrls: ['./form-pagamento.component.css'],
   providers: [PagamentoService, Router]
 })
 export class FormPagamentoComponent {

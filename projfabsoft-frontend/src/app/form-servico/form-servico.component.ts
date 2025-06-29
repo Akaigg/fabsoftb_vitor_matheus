@@ -10,32 +10,30 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   selector: 'app-form-servico',
   imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './form-servico.component.html',
-  styleUrl: './form-servico.component.css',
+  styleUrls: ['./form-servico.component.css'],
   providers: [ServicoService, Router]
 })
 export class FormServicoComponent {
   servico: Servico = new Servico();
   
-    constructor(
-      private servicoService: ServicoService,
-      private router: Router,
-      private activedRouter: ActivatedRoute
-    ){
-        const id = this.activedRouter.snapshot.paramMap.get('id');
-  
-        if(id) {
-          this.servicoService.getServicoById(id).subscribe(servico => {
-            this.servico = servico;
-          })
-        }
-  
-    }
-  
-    salvar(){
-      this.servicoService.saveServico(this.servico)
-       .subscribe(resultado => {
-        this.router.navigate(['servicos'])
-       });
-    }
+  constructor(
+    private servicoService: ServicoService,
+    private router: Router,
+    private activedRouter: ActivatedRoute
+  ){
+    const id = this.activedRouter.snapshot.paramMap.get('id');
 
+    if(id) {
+      this.servicoService.getServicoById(id).subscribe(servico => {
+        this.servico = servico;
+      })
+    }
+  }
+
+  salvar(){
+    this.servicoService.saveServico(this.servico)
+     .subscribe(resultado => {
+      this.router.navigate(['servico'])
+     });
+  }
 }

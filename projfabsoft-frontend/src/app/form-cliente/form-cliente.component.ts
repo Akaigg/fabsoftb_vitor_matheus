@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Cliente} from '../model/cliente';
+import {  Cliente } from '../model/cliente';
 import { ClienteService} from '../service/cliente.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   selector: 'app-form-cliente',
   imports: [HttpClientModule, CommonModule, FormsModule],
   templateUrl: './form-cliente.component.html',
-  styleUrl: './form-cliente.component.css',
+  styleUrls: ['./form-cliente.component.css'],
   providers: [ClienteService, Router]
 })
 export class FormClienteComponent {
@@ -30,7 +30,6 @@ export class FormClienteComponent {
       }
 
   }
-
   salvar(){
     this.clienteService.saveCliente(this.cliente)
      .subscribe(resultado => {

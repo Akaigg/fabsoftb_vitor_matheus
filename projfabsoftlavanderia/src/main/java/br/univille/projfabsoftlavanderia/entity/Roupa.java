@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Roupa {
@@ -14,7 +14,7 @@ public class Roupa {
     private long id;
     private String tipo;
     private double preco;
-    @OneToOne
+    @ManyToOne
     private Servico servico;
 
     // Getters e Setters

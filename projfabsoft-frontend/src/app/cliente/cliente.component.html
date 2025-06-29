@@ -8,12 +8,15 @@
             <tr>
                 <th>Nome</th>
                 <th>Telefone</th>
+                <th>Código</th>
+
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let umCliente of listaClientes">
                 <td>{{umCliente.nome}}</td>
                 <td>{{umCliente.telefone}}</td>
+                <td>{{umCliente.codigo}}</td>
                 <td>
                     <a (click)="alterar(umCliente)" class="btn btn-secondary">Alterar</a>
                     <a (click)="abrirConfirmacao(umCliente)" class="btn btn-danger ml-2">Excluir</a>

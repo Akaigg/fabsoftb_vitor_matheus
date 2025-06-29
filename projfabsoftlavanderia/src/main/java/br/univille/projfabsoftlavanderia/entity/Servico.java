@@ -9,10 +9,20 @@ import jakarta.persistence.Id;
 public class Servico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
     private long id;
+
     private String descricao;
     private double preco;
+
+    // ✅ Construtor vazio (necessário para o JPA)
+    public Servico() {
+    }
+
+    // ✅ Construtor com descrição
+    public Servico(String descricao) {
+        this.descricao = descricao;
+        this.preco = 0.0; // ou algum valor padrão
+    }
 
     // Getters e Setters
     public long getId() {
