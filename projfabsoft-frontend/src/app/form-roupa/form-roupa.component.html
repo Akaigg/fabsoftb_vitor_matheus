@@ -1,0 +1,20 @@
+<main class="container">
+    <h2>roupa</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="txtTipoRoupa">Tipo Roupa</label>
+                <input type="text" [(ngModel)] = "roupa.tipo" class="form-control" id="txtTipoRoupa">
+            </div>
+            <div class="form-group">
+                <label for="txtPreco">Preco</label>
+                <input type="text" [(ngModel)] = "roupa.preco" class="form-control" id="txtPreco">
+            </div>
+            <div class="form-group">
+                <label for="txtServico">Servico</label>
+                <input type="text" [(ngModel)] = "roupa.servico" class="form-control" id="txtServico">
+            </div>
+        </div>
+        <button (click)="salvar()" class="btn btn-primary">Salvar</button>
+    </div>
+</main>

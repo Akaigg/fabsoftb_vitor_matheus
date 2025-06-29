@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoftlavanderia.entity.Cliente;
 import br.univille.projfabsoftlavanderia.service.ClienteService;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -40,16 +39,7 @@ public class ClienteController {
 
         return new ResponseEntity<Cliente>(umCliente, HttpStatus.OK);
     }
-
     
-    
-
-
-
-
-
-
-
     @PostMapping
     public ResponseEntity<Cliente> postCliente(@RequestBody Cliente cliente){
         if(cliente == null){

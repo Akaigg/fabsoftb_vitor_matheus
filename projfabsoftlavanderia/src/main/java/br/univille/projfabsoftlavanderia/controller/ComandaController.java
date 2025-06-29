@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.univille.projfabsoftlavanderia.entity.Comanda;
 import br.univille.projfabsoftlavanderia.service.ComandaService;
 
@@ -31,6 +30,14 @@ public class ComandaController {
         return new ResponseEntity<List<Comanda>>(listaComanda, HttpStatus.OK);
         
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Comanda> getComanda(@PathVariable long id){
+        var umComanda = service.getById(id);
+
+        return new ResponseEntity<Comanda>(umComanda, HttpStatus.OK);
+    }
+
 
     @PostMapping
     public ResponseEntity<Comanda> postComanda(@RequestBody Comanda Comanda){

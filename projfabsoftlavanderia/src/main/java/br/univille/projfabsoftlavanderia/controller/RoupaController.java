@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.univille.projfabsoftlavanderia.entity.Roupa;
 import br.univille.projfabsoftlavanderia.service.RoupaService;
 
@@ -30,6 +29,13 @@ public class RoupaController {
         
         return new ResponseEntity<List<Roupa>>(listaRoupa, HttpStatus.OK);
         
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Roupa> getRoupa(@PathVariable long id){
+        var umRoupa = service.getById(id);
+
+        return new ResponseEntity<Roupa>(umRoupa, HttpStatus.OK);
     }
 
     @PostMapping

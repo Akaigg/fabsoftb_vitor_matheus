@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Comanda } from '../model/comanda';
 import { ComandaService } from '../service/comanda.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,8 +9,8 @@ import * as bootstrap from 'bootstrap';
 @Component({
   selector: 'app-Comanda',
   imports: [HttpClientModule, CommonModule],
-  templateUrl: './Comanda.component.html',
-  styleUrl: './Comanda.component.css',
+  templateUrl: './comanda.component.html',
+  styleUrl: './comanda.component.css',
   providers: [ComandaService, Router]
 })
 export class ComandaComponent {

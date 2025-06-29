@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.univille.projfabsoftlavanderia.entity.Servico;
 import br.univille.projfabsoftlavanderia.service.ServicoService;
 
@@ -30,6 +29,13 @@ public class ServicoController {
         
         return new ResponseEntity<List<Servico>>(listaServico, HttpStatus.OK);
         
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Servico> getServico(@PathVariable long id){
+        var umServico = service.getById(id);
+
+        return new ResponseEntity<Servico>(umServico, HttpStatus.OK);
     }
 
     @PostMapping

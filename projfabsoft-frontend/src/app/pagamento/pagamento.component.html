@@ -1,5 +1,8 @@
 <main class="container">
-    <h2>pagamento</h2>
+    <h2>Pagamento</h2>
+
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
+
     <table class="table">
         <thead>
             <tr>
@@ -7,7 +10,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let umpagamento of listapagamentos">
+            <tr *ngFor="let umpagamento of listaPagamentos">
                 <td>{{umpagamento.formaPagamento}}</td>
                 <td>
                     <a (click)="alterar(umpagamento)" class="btn btn-secondary">Alterar</a>

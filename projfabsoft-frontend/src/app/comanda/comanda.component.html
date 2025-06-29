@@ -1,5 +1,8 @@
 <main class="container">
-    <h2>comanda</h2>
+    <h2>Comanda</h2>
+
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
+
     <table class="table">
         <thead>
             <tr>
@@ -11,11 +14,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let umcomanda of listacomandas">
-                <td>{{umcomanda.dataEntrada}}</td>
-                <td>{{umcomanda.dataRetirada}}</td>
-                <td>{{umcomanda.ListaRoupas}}</td>
-                <td>{{umcomanda.ListaServicos}}</td>
+            <tr *ngFor="let umcomanda of listaComandas">
+                <td>{{umcomanda.dataEntrada | date:'dd/MM/yyyy'}}</td>
+                <td>{{umcomanda.dataRetirada | date:'dd/MM/yyyy'}}</td>
+                <td>{{umcomanda.listaRoupas}}</td>
+                <td>{{umcomanda.listaServicos}}</td>
                 <td>{{umcomanda.pagamento}}</td>
                 <td>
                     <a (click)="alterar(umcomanda)" class="btn btn-secondary">Alterar</a>

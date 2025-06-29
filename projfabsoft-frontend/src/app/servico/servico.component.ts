@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Servico } from '../model/servico';
 import { ServicoService } from '../service/servico.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,8 +9,8 @@ import * as bootstrap from 'bootstrap';
 @Component({
   selector: 'app-Servico',
   imports: [HttpClientModule, CommonModule],
-  templateUrl: './Servico.component.html',
-  styleUrl: './Servico.component.css',
+  templateUrl: './servico.component.html',
+  styleUrl: './servico.component.css',
   providers: [ServicoService, Router]
 })
 export class ServicoComponent {

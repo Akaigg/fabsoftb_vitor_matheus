@@ -1,0 +1,16 @@
+<main class="container">
+    <h2>pagamento</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="txtFormaPagamento">Forma Pagamento</label>
+                <input type="text" [(ngModel)] = "pagamento.formaPagamento" class="form-control" id="txtFormaPagamento">
+            </div>
+            <div class="form-group">
+                <label for="txtPago">Pago</label>
+                <input type="text" [(ngModel)] = "pagamento.pago" class="form-control" id="txtPago">
+            </div>
+        </div>
+        <button (click)="salvar()" class="btn btn-primary">Salvar</button>
+    </div>
+</main>

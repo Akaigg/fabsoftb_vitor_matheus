@@ -1,5 +1,8 @@
 <main class="container">
-    <h2>roupa</h2>
+    <h2>Roupa</h2>
+
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
+
     <table class="table">
         <thead>
             <tr>
@@ -9,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let umroupa of listaroupas">
+            <tr *ngFor="let umroupa of listaRoupas">
                 <td>{{umroupa.tipo}}</td>
                 <td>{{umroupa.servico}}</td>
                 <td>{{umroupa.preco}}</td>

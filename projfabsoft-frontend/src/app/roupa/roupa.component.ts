@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Roupa } from '../model/roupa';
 import { RoupaService } from '../service/roupa.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,8 +9,8 @@ import * as bootstrap from 'bootstrap';
 @Component({
   selector: 'app-Roupa',
   imports: [HttpClientModule, CommonModule],
-  templateUrl: './Roupa.component.html',
-  styleUrl: './Roupa.component.css',
+  templateUrl: './roupa.component.html',
+  styleUrl: './roupa.component.css',
   providers: [RoupaService, Router]
 })
 export class RoupaComponent {

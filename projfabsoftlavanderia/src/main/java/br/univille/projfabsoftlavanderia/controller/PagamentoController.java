@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.univille.projfabsoftlavanderia.entity.Pagamento;
 import br.univille.projfabsoftlavanderia.service.PagamentoService;
 
@@ -42,6 +41,13 @@ public class PagamentoController {
             return new ResponseEntity<Pagamento>(Pagamento, HttpStatus.OK);
         }
         return ResponseEntity.badRequest().build();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Pagamento> getPagamento(@PathVariable long id){
+        var umPagamento = service.getById(id);
+
+        return new ResponseEntity<Pagamento>(umPagamento, HttpStatus.OK);
     }
     
     @PutMapping("/{id}")

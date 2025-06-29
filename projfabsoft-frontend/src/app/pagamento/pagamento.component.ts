@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Pagamento } from '../model/pagamento';
 import { PagamentoService } from '../service/pagamento.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -9,8 +9,8 @@ import * as bootstrap from 'bootstrap';
 @Component({
   selector: 'app-Pagamento',
   imports: [HttpClientModule, CommonModule],
-  templateUrl: './Pagamento.component.html',
-  styleUrl: './Pagamento.component.css',
+  templateUrl: './pagamento.component.html',
+  styleUrl: './pagamento.component.css',
   providers: [PagamentoService, Router]
 })
 export class PagamentoComponent {
