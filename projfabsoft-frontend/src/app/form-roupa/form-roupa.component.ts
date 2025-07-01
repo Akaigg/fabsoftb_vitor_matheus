@@ -42,7 +42,7 @@ export class FormRoupaComponent implements OnInit {
 
   salvar() {
     this.roupaService.saveRoupa(this.roupa).subscribe(() => {
-      this.router.navigate(['roupas']);
+      this.router.navigate(['roupa']);
     });
   }
 }

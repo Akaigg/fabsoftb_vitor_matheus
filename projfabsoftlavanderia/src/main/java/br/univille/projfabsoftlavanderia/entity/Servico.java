@@ -14,14 +14,12 @@ public class Servico {
     private String descricao;
     private double preco;
 
-    // ✅ Construtor vazio (necessário para o JPA)
     public Servico() {
     }
 
-    // ✅ Construtor com descrição
     public Servico(String descricao) {
         this.descricao = descricao;
-        this.preco = 0.0; // ou algum valor padrão
+        this.preco = 0.0;
     }
 
     // Getters e Setters

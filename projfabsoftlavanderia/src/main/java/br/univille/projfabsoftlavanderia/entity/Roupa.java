@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
@@ -15,6 +16,7 @@ public class Roupa {
     private String tipo;
     private double preco;
     @ManyToOne
+    @JoinColumn(name = "servico_id", nullable = false)
     private Servico servico;
 
     // Getters e Setters

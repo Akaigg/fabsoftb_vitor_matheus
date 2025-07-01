@@ -1,15 +1,16 @@
 ### API CLIENTE - GET
-GET http://localhost:8080/api/v1/clientes
+GET http://localhost:8080/api/v1/Servicos
 
 
 ### API CLIENTE - POST
-POST http://localhost:8080/api/v1/clientes
+POST http://localhost:8080/api/v1/Servicos
 Content-Type: application/json
 
 {
-    "nome": "zezinho",
-    "telefone": "55512345",
-    "codigo": "1"
+    
+    "descricao": "Lavação à seco",
+    "preco":"0.0"
+    
     
     
     
