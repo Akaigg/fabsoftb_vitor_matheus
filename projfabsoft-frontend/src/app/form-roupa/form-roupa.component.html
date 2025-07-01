@@ -12,18 +12,10 @@
         />
       </div>
       <div class="form-group">
-        <label for="txtPreco">Preço</label>
-        <input
-          type="number"
-          [(ngModel)]="roupa.preco"
-          class="form-control"
-          id="txtPreco"
-        />
-      </div>
-      <div class="form-group">
         <label for="selectServico">Serviço</label>
         <select
           [(ngModel)]="roupa.servico"
+          (change)="atualizarPreco()"
           class="form-control"
           id="selectServico"
           name="selectServico"
@@ -33,8 +25,17 @@
           </option>
         </select>
       </div>
+      <div class="form-group">
+        <label for="txtPreco">Preço</label>
+        <input
+          type="number"
+          [(ngModel)]="roupa.preco"
+          class="form-control"
+          id="txtPreco"
+          readonly
+        />
+      </div>
     </div>
     <button (click)="salvar()" class="btn btn-primary">Salvar</button>
   </div>
 </main>
-

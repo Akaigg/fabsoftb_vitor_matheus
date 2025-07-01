@@ -45,4 +45,10 @@ export class FormRoupaComponent implements OnInit {
       this.router.navigate(['roupas']);
     });
   }
+
+  atualizarPreco() {
+    if (this.roupa.servico) {
+      this.roupa.preco = this.roupa.servico.preco;
+    }
+  }
 }
